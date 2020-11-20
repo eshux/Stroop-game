@@ -3,9 +3,11 @@ import './App.scss';
 import 'flexboxgrid';
 import Start from './components/stages/Start';
 import IconBtn from './components/buttons/IconBtn';
+import L from './media/ar.png';
+import R from './media/ar2.png';
 
-const soundC = new Audio('/correct.mp3');
-const soundW = new Audio('/wrong.mp3');
+const soundC = new Audio('correct.mp3');
+const soundW = new Audio('wrong.mp3');
 
 const colors = ['red', 'green', 'blue', 'yellow'];
 const words = ['RED', 'GREEN', 'BLUE', 'YELLOW'];
@@ -174,7 +176,7 @@ const App = () => {
                     </h1>
                     <IconBtn
                       className='button--icon button--icon-return'
-                      src={`${process.env.PUBLIC_URL} ./ar.png`}
+                      src={L}
                       onClick={() => {
                         setCounter(-2);
                         setLittleCounter(-1);
@@ -182,7 +184,7 @@ const App = () => {
                     />
                     <IconBtn
                       className='button--icon button--icon-skip'
-                      src={`${process.env.PUBLIC_URL} ./ar2.png`}
+                      src={R}
                       onClick={() => {
                         setCounter(0);
                         setLittleCounter(0);
@@ -212,7 +214,7 @@ const App = () => {
                 </button>
                 <IconBtn
                   className='button--icon button--icon-return'
-                  src={`${process.env.PUBLIC_URL} ./ar.png`}
+                  src={L}
                   onClick={() => {
                     setCounter(-2);
                     setLittleCounter(-1);

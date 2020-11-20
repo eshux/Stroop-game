@@ -2,6 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import MainBtn from '../buttons/MainBtn';
 import IconBtn from '../buttons/IconBtn';
+import S from '../../media/s.png';
 import './Start.scss';
 
 type Props = {
@@ -67,7 +68,7 @@ const Start: FC<Props> = ({
         }}
       />
       <IconBtn
-        src={`${process.env.PUBLIC_URL} ./s.png`}
+        src={S}
         className="button--setting"
         onClick={() => {
           setShowRules(false);
