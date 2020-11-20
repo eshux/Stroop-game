@@ -1,3 +1,3 @@
 # Strop game
-See here: 
+See here: https://eshux.github.io/Stroop-game/
 
