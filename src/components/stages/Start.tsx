@@ -68,7 +68,7 @@ const Start: FC<Props> = ({
         }}
       />
       <IconBtn
-        src="%PUBLIC_URL%/s.png"
+        src={S}
         className="button--setting"
         onClick={() => {
           setShowRules(false);

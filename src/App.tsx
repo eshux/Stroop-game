@@ -6,8 +6,8 @@ import IconBtn from './components/buttons/IconBtn';
 import L from './media/ar.png';
 import R from './media/ar2.png';
 
-const soundC = new Audio('correct.mp3');
-const soundW = new Audio('wrong.mp3');
+const soundC = new Audio('../public/correct.mp3');
+const soundW = new Audio('../public/wrong.mp3');
 
 const colors = ['red', 'green', 'blue', 'yellow'];
 const words = ['RED', 'GREEN', 'BLUE', 'YELLOW'];

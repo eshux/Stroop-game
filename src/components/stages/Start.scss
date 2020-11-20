@@ -98,6 +98,11 @@
 
     &:hover{
         background:none;
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
     }
 }
 
