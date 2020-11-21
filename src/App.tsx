@@ -3,8 +3,6 @@ import './App.scss';
 import 'flexboxgrid';
 import Start from './components/stages/Start';
 import IconBtn from './components/buttons/IconBtn';
-import L from './media/ar.png';
-import R from './media/ar2.png';
 
 const soundC = new Audio('../public/correct.mp3');
 const soundW = new Audio('../public/wrong.mp3');
@@ -109,7 +107,7 @@ const App = () => {
         newArr[1].count += 1;
         soundW.play();
       }
-      newArr[2].count = gameMode-(newArr[1].count + newArr[0].count);
+      newArr[2].count = gameMode - (newArr[1].count + newArr[0].count);
       newArr[2].count < 0 && (newArr[2].count = 0);
       setResults(newArr);
     }
@@ -144,7 +142,6 @@ const App = () => {
     setGameSpeed(num);
   };
 
-
   return (
     <div className="app">
       <div className="container">
@@ -174,17 +171,18 @@ const App = () => {
                     <h1 style={{ color: `${color}`, fontSize: '70px' }}>
                       {word}
                     </h1>
+         
                     <IconBtn
-                      className='button--icon button--icon-return'
-                      src={L}
+                      className="button--icon button--icon-return"
+                      icon='arrow-left'
                       onClick={() => {
                         setCounter(-2);
                         setLittleCounter(-1);
                       }}
                     />
                     <IconBtn
-                      className='button--icon button--icon-skip'
-                      src={R}
+                      className="button--icon button--icon-skip"
+                      icon='arrow-right'
                       onClick={() => {
                         setCounter(0);
                         setLittleCounter(0);
@@ -205,16 +203,20 @@ const App = () => {
                 <input
                   type="text"
                   placeholder="Enter your name"
-                  className='input'
+                  className="input"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                 />
-                <button type="button" className='button--save' onClick={saveResultsHandler}>
+                <button
+                  type="button"
+                  className="button--save"
+                  onClick={saveResultsHandler}
+                >
                   SAVE
                 </button>
                 <IconBtn
-                  className='button--icon button--icon-return'
-                  src={L}
+                  className="button--icon button--icon-return"
+                  icon='arrow-left'
                   onClick={() => {
                     setCounter(-2);
                     setLittleCounter(-1);

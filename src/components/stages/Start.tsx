@@ -2,8 +2,8 @@ import React, { FC, useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import MainBtn from '../buttons/MainBtn';
 import IconBtn from '../buttons/IconBtn';
-import S from '../../media/s.png';
 import './Start.scss';
+
 
 type Props = {
   startHandler: () => void;
@@ -54,6 +54,7 @@ const Start: FC<Props> = ({
           setShowResults(!showResults);
         }}
       />
+      
       <MainBtn
         className="button--play"
         text="PLAY"
@@ -68,7 +69,7 @@ const Start: FC<Props> = ({
         }}
       />
       <IconBtn
-        src={S}
+        icon='cog'
         className="button--setting"
         onClick={() => {
           setShowRules(false);
@@ -76,6 +77,7 @@ const Start: FC<Props> = ({
           setShowSettings(!showSettings);
         }}
       />
+       
 
       {showRules && (
         <div className="rules">
